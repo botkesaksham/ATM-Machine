@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Machine</title>
+</head>
+<style>
+    body{
+        margin: 0 0 0 0;
+        background-color: red
+    }
+   .container{
+    background-image:url("background.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    width: 80vw;
+    position: absolute;
+    left: 14%;
+   }
+
+   .outerbox{
+    margin-left: 8rem;
+    margin-right: 15rem;
+    margin-bottom: 10rem;
+    background-color: rgba(6, 28, 54, 1);
+    height: 24rem;
+    margin-top: 5rem;
+    border-radius: 1rem;
+   }
+
+   .navbar{
+    display: flex;
+    background-color: #7BA7E9;
+    height: 4.8rem;
+   }
+
+   .navbar h1{
+    margin-top: 1.2rem;
+    margin-left: 1rem;
+    margin-right: 15rem;
+   }
+
+   .navbar p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 800;
+    font-size: 14px;
+   }
+
+    h2{
+        margin-top: 30px;
+        margin-left: 2rem;
+        margin-bottom: 2px;
+        color: rgb(183, 183, 183);
+        font-size: 1.5rem;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+   .mainsection{
+     display: flex;
+     justify-content: center;
+     height: 12.4rem;
+     
+   }
+
+   .left img{
+    height: 100px;
+    width: 100px;
+
+   }
+
+   .right img{
+    height: 100px;
+    width: 100px;
+   }
+
+   .left{
+    display: flex;
+    margin-right: 5rem;
+    flex-direction: column;
+   }
+
+   .right{
+    display: flex;
+    flex-direction: column;
+   }
+
+   .footer{
+    background-color: #7BA7E9;
+    height: 3rem;
+    border-radius: 2px;
+   }
+
+   .bottomright{
+    display: flex;
+    justify-content: flex-end;
+    height: 3rem;
+   }
+   
+   .bottomright h3{
+    margin-top: 12px;
+   }
+   .bn632-hover {
+  width: 160px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632-hover:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632-hover:focus {
+  outline: none;
+}
+
+.bn632-hover.bn20 {
+  background-image: linear-gradient(
+    to right,
+    #10c15a,
+    #0f8940,
+    #178336,
+    #0b7c31
+  );
+  box-shadow: 0 4px 15px 0 rgba(5, 63, 23, 0.75);
+  width: 10rem;
+  height: 2.5rem;
+  margin-left: 2rem;
+}
+
+#logout{
+    background-image: linear-gradient(
+    to right,
+    #c11010,
+    #b00808,
+    #670606,
+    #4a0202
+  );
+  height: 2rem;
+  width: 6rem;
+  margin-top: 7px;
+  margin-left: 10px;
+  font-size: 13px;
+}
+
+.bn5 {
+  padding: 0.6em 2em;
+  background-color: rgb(15, 7, 7);
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.bn5:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowingbn5 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowingbn5 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.bn5:active {
+  color: #050505;
+}
+
+.bn5:active:after {
+  background: transparent;
+}
+
+.bn5:hover:before {
+  opacity: 1;
+}
+
+.bn5:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #191919;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+#savingbtn, #currentbtn{
+    width: 15rem;
+    border-radius: 10px;
+    margin-left: 10rem;
+}
+
+#savingbtn{ 
+    margin-top: 3px;
+}
+#backbtn,#nextbtn{
+    padding: 10px 10px 10px 10px;
+    width: 3.8rem;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+#backbtn{
+    margin-top: 9rem;
+}
+
+#nextbtn{
+    margin-top: 4px;
+    margin-left: 24rem;
+}
+   
+</style>
+<body>
+  <div class="container">
+    <div class="outerbox">
+        <div class="navbar">
+            <h1>AKPSKSM BANK</h1>
+            <p>Customer Support
+                <br>+91 8000 200 312
+                <br>+91 8000 300 422
+            </p>
+        </div>
+
+        <h2>
+            Please select an account to continue.
+        </h2>
+
+        <div class="mainsection">
+            <div class="left">
+                <a href="home.html" class="bn5" id="backbtn"><center><< Back</center></a>
+
+            </div>
+            <div class="right">
+                <a href="acct.html?account=CHQ"><button id="currentbtn" class="bn632-hover bn20">Current Account</button></a>
+                <a href="acct.html?account=SAV"><button id="savingbtn" class="bn632-hover bn20">Savings Account</button></a>
+                <a href="/" class="bn5" id="nextbtn"><center>Next >></center></a>
+                
+
+            </div>
+
+            </div>
+
+        <div class="footer">
+            <div class="bottomright">
+                <h3>Change of plans?</h3>
+                <a href="main.html"><button class="bn632-hover bn20" id="logout">Logout</button></a>
+            </div>
+
+        </div>
+            
+
+    </div>
+    
+    
+
+
+</div>
+</body>
+</html>

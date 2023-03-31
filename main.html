@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Machine</title>
+    <script src="js/updateBalance.js"></script>
+</head>
+<style>
+    body{
+        margin: 0 0 0 0;
+        background-color: red
+    }
+   .container{
+    background-image:url("background.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    width: 80vw;
+    position: absolute;
+    left: 14%;
+   }
+
+   .outerbox{
+    margin-left: 8rem;
+    margin-right: 15rem;
+    margin-bottom: 10rem;
+    background-color: rgba(6, 28, 54, 1);
+    height: 24rem;
+    margin-top: 5rem;
+    border-radius: 1rem;
+   }
+
+   .navbar{
+    display: flex;
+    background-color: #7BA7E9;
+    height: 4.8rem;
+   }
+
+   .navbar h1{
+    margin-top: 1.2rem;
+    margin-left: 1rem;
+    margin-right: 15rem;
+   }
+
+   .navbar p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 800;
+    font-size: 14px;
+   }
+    h2{
+        margin-top: 10px;
+        color: rgb(183, 183, 183);
+        font-size: 1.5rem;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+   .mainsection{
+     display: flex;
+     justify-content: center;
+     margin-bottom: 0.7rem;
+     
+   }
+
+   .left img{
+    height: 100px;
+    width: 100px;
+
+   }
+
+   .left h1{
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 100;
+    margin-left: 1rem;
+   }
+
+   .right{
+    height: 220px;
+    background: #D9D9D9;
+    border-radius: 2rem;
+    margin-right: 1rem;
+    margin-left: 2rem;
+   }
+
+
+   .right img{
+    margin-top: -10px;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 2rem;
+    
+   }
+
+   .footer{
+    background-color: #7BA7E9;
+    height: 3rem;
+    border-radius: 2px;
+   }
+
+   .bottomright{
+    display: flex;
+    justify-content: flex-end;
+    height: 3rem;
+   }
+   
+   .bottomright h3{
+    margin-top: 12px;
+   }
+   .bn632-hover {
+  width: 160px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632-hover:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632-hover:focus {
+  outline: none;
+}
+
+.bn632-hover.bn20 {
+  background-image: linear-gradient(
+    to right,
+    #10c15a,
+    #0f8940,
+    #178336,
+    #0b7c31
+  );
+  box-shadow: 0 4px 15px 0 rgba(5, 63, 23, 0.75);
+  width: 10rem;
+  height: 2.5rem;
+  margin-left: 2rem;
+}
+
+#logout{
+    background-image: linear-gradient(
+    to right,
+    #c11010,
+    #b00808,
+    #670606,
+    #4a0202
+  );
+  height: 2rem;
+  width: 6rem;
+  margin-top: 7px;
+  margin-left: 10px;
+  font-size: 13px;
+}
+
+@media only screen and (min-width: 1300px) {
+  .container {
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 75vh;
+    width: 66vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.outerbox {
+    margin-left: 8rem;
+    margin-right: 8rem;
+    margin-bottom: 10rem;
+    background-color: rgba(6, 28, 54, 1);
+    height: 24.4rem;
+    margin-top: 5rem;
+    border-radius: 1rem;
+}
+
+}
+
+   
+</style>
+<body>
+    <div class="container">
+        <div class="outerbox">
+            <div class="navbar">
+                <h1>AKPSKSM BANK</h1>
+                <p>Customer Support
+                    <br>+91 8000 200 312
+                    <br>+91 8000 300 422
+                </p>
+            </div>
+
+            <center><h2>WELCOME USER</h2></center>
+
+            <div class="mainsection" >
+                    <div class="left">
+                        <h1>Welcome to AKPSKSM BANK!!</h1>
+                        <h1>Where we can help you carry out transactions seamlessly!</h1>
+                        <h1>Scan your Finger in order to continue</h1>
+                    </div>
+    
+                    <div class="right">
+                      <center><h3>Scan your finger</h3></center>
+                      <a onclick="insertCard()" <center><script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                        <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_jolzjo1s.json" mode="bounce" background="transparent"  speed="1"  style="width: 10rem; height: 10rem; border-radius: 2rem;" hover loop ></lottie-player></center></a>
+                
+    
+    
+                    </div>
+                
+                </div>
+                    
+
+              </div>
+                
+
+        </div>
+        
+        
+
+
+    </div>
+    <script>
+      var users = {
+        'accountNumber': 1234567887654321,
+        'accountPin': 6969,
+        'chequingBalance': 2000,
+        'savingsBalance': 5000,
+        'chequingTransactions': [[Date(),0,0,2000]],
+        'savingsTransactions': [[Date(),0,0,5000]]
+      };
+      console.log(users)
+      updateSessionStorage(users);
+    
+    function insertCard(){
+      window.location="PINInput.html"
+    }
+    
+    function input(e) {
+        var tbInput = document.getElementById("tbInput");
+        if (tbInput.value.length < 16) {
+        tbInput.value=tbInput.value + e.value;
+      }
+    }
+    
+    function del() {
+      var tbInput = document.getElementById("tbInput");
+      tbInput.value = tbInput.value.substr(0, tbInput.value.length-1);
+    }
+    
+    function ent() {
+      var PIN="1234567887654321";
+      var str1=document.getElementById("tbInput").value;
+      if (str1==PIN) {
+        window.location="PINInput.html";
+       } else {
+         alert("That account number does not exist!");
+         document.getElementById("tbInput").value ="";
+       }
+    }
+    </script>
+</body>
+</html>

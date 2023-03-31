@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+  <link rel="stylesheet" type="text/css" href="css/styling.css">
+  <link rel="stylesheet" href="basic.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+  <script src="js/updateBalance.js"></script>
+
+</head>
+<style>
+  .mainsection{
+    flex-direction: column;
+  }
+
+  .wait{
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    color: white;
+  }
+
+  .thank{
+    margin-top: 10px;
+    font-size: 2rem;
+    color: white;
+  }
+
+  #OK{
+    position: absolute;
+    top: 70%;
+    right: 29%;
+
+
+  }
+
+  #backbtn{
+    position: absolute;
+    top: 71%;
+    left: 15%;
+  }
+
+  #backbtn a{
+    color: white;
+    
+  }
+
+  .footer{
+    height: 3.9rem;
+  }
+</style>
+
+
+<body>
+
+  <div class="containerr">
+    <div class="outerbox">
+        <div class="navbar">
+            <h1>AKPSKSM BANK</h1>
+            <p>Customer Support
+                <br>+91 8000 200 312
+                <br>+91 8000 300 422
+            </p>
+        </div>
+
+        <div class="mainsection">
+              <h1  class="wait" align="center">Insert the bills directly into the Deposit Slot</h1>
+              <div class="animation">
+                <center><video width="320" height="220" autoplay loop>
+                  <source src="cashDeposit.mp4" type="video/mp4">
+                </video></center>
+                <h1  class="thank" align="center">Click OK to Continue</h1>
+                <a href="depositComplete.html"  id="OK"  style="" class="bn5">OK</a>
+                <button id="backbtn" class="bn5"> <a href="depositConfirmation.html"><< Back</a></button>
+
+              </div>
+              
+              <div class="footer">
+                <div class="bottomright">
+                    <a href="main.html"><button class="bn632-hover bn20" id="logout">Logout</button></a>
+                </div>
+
+            </div>
+            </div> 
+                
+
+
+
+          </body>
+
+
+</html>
+
